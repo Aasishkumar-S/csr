@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cyber Splash 2026 — The ultimate cybersecurity event by Cyber Sonic Rangers. Four elite rounds: Cyber Recon, Password Breach, Operation Dhurandhar, HackQuest."/>
+  <title>Cyber Splash 2026 — Cyber Sonic Rangers</title>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <style>
+    .social-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.social-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* SVG icon */
+.social-btn svg {
+  width: 26px;
+  height: 26px;
+  fill: white;
+}
+
+/* Glow effect */
+.social-btn::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  /* background: linear-gradient(45deg, #00f, #0ff, #0f0, #ff0, #f00); */
+  z-index: -1;
+  opacity: 0;
+  filter: blur(10px);
+  transition: 0.3s;
+}
+
+.social-btn:hover::before {
+  opacity: 1;
+}
+
+.social-btn:hover {
+  transform: scale(1.25);
+}
+
+/* Colors */
+.linkedin {
+  background: #0077b5;
+  box-shadow: 0 0 10px #0077b5;
+}
+
+.instagram {
+  background: #e4405f;
+  box-shadow: 0 0 10px #e4405f;
+}
+
+.whatsapp {
+  background: #25D366;
+  box-shadow: 0 0 10px #25D366;
+}
+  </style>
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div id="scroll-bar"></div>
+
+<!-- ══ NAVBAR ══════════════════════════════ -->
+<nav id="navbar">
+  <a href="#" data-page="home" class="nav-logo" aria-label="Home">
+    <div class="nav-logo-hex">
+      <img src="C:\Users\LENOVO\Desktop\csr-event\New folder\logo.jpeg" alt="">
+    </div>
+    <div class="nav-logo-text">
+      <span>Cyber Sonic Rangers</span>
+      <span>Cyber Splash 2026</span>
+    </div>
+  </a>
+
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="#" data-page="home">Home</a></li>
+    <li><a href="#" data-page="about">About</a></li>
+    <li><a href="#" data-page="events">Events</a></li>
+    <li><a href="#" data-page="contact">Contact</a></li>
+  </ul>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6_yXE5lqT6rlDZStAkknykeghJtuWaqLqjKn9P1VP75iIhg/viewform?usp=dialog"
+   target="_blank"
+   class="nav-cta btn">
+  Register Now
+</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-home">
+  <canvas id="hero-canvas"></canvas>
+
+  <section id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-scan"></div>
+
+    <p class="hero-overline">✦ Cyber Sonic Rangers Presents ✦</p>
+
+    <h1 class="hero-title">
+      <span class="word1">CYBER</span>
+      <span class="word2">SPLASH</span>
+    </h1>
+
+    <p class="hero-tagline">
+      Dive Into The <em>Future</em> of Cyber Intelligence.
+    </p>
+
+    <div class="hero-badge">
+      <div class="badge-icon">      <img src="C:\Users\LENOVO\Desktop\csr-event\New folder\logo.jpeg" alt="">
+</div>
+      <span>Cyber Sonic Rangers · 2026 Edition</span>
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6_yXE5lqT6rlDZStAkknykeghJtuWaqLqjKn9P1VP75iIhg/viewform?usp=dialog" class="btn btn-primary">
+        ⚡ Register Now
+      </a>
+      <a href="https://chat.whatsapp.com/KcyVA8VNAViALXAA6S5fDN" target="_blank" rel="noopener" class="btn btn-ghost">
+        💬 Join WhatsApp Group
+      </a>
+    </div>
+
+    <!-- <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-mouse"></div>
+    </div> -->
+  </section>
+
+  <!-- Feature strip -->
+  <div class="hero-strip">
+    <div class="strip-grid">
+      <div class="card strip-card" data-reveal>
+        <div class="strip-icon">🏆</div>
+        <div class="strip-label" style="color:var(--blue)">4 Elite Rounds</div>
+        <p>From recon missions to full CTF war — every round escalates the challenge.</p>
+      </div>
+      <div class="card strip-card" data-reveal data-delay="2">
+        <div class="strip-icon">⚡</div>
+        <div class="strip-label" style="color:var(--purple)">Live Challenges</div>
+        <p>Real-time cyber battles that test your speed, wit, and hacking instinct.</p>
+      </div>
+      <div class="card strip-card" data-reveal data-delay="4">
+        <div class="strip-icon">🎯</div>
+        <div class="strip-label" style="color:var(--pink)">Epic Prizes</div>
+        <p>Compete for glory and exclusive rewards in the ultimate cyber showdown.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Cyber Sonic Rangers</div>
+          <div class="fb-sub">Cybersecurity &amp; Tech Club</div>
+        </div>
+        <div></div>
+        <div class="footer-status">
+          <div class="pulse-dot"></div>
+          Cyber Splash 2026 — Live
+        </div>
+      </div> -->
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 <strong>Cyber Sonic Rangers</strong>. All rights reserved.
+          &nbsp;·&nbsp; Cyber Splash is an official club event.
+        </div>
+        <div class="footer-tag">Made with ⚡ by the Rangers</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="section">
+
+    <div class="about-header">
+      <div class="eyebrow" data-reveal>About the Club</div>
+      <h1 class="page-title" data-reveal data-delay="1">
+        <span class="grad-text">Cyber Sonic Rangers</span>
+      </h1>
+      <p class="lead" data-reveal data-delay="2">
+        A student-driven cybersecurity club built on curiosity, collaboration, and a relentless drive to push the boundaries of digital intelligence. We forge the next generation of cyber defenders through hands-on events and open learning.
+      </p>
+    </div>
+
+    <div class="about-cards">
+      <div class="card" data-reveal data-delay="1">
+        <div class="card-icon ci-blue">⚔️</div>
+        <div class="card-tag ct-blue">Who We Are</div>
+        <h3>Our Identity</h3>
+        <p>Founded by passionate engineers and ethical hackers, Cyber Sonic Rangers is a space where students challenge themselves, share knowledge, and grow into confident digital professionals. From beginners to experts, everyone belongs here.</p>
+      </div>
+
+      <div class="card" data-reveal data-delay="2">
+        <div class="card-icon ci-purple">🎯</div>
+        <div class="card-tag ct-purple">What We Do</div>
+        <h3>Our Activities</h3>
+        <p>We run workshops on network security, web exploitation, cryptography, and forensics. We participate in national CTF competitions, organize inter-college events, and mentor students stepping into cybersecurity for the first time.</p>
+      </div>
+
+      <div class="card about-card-full" data-reveal data-delay="3">
+        <div class="card-icon ci-pink">🌐</div>
+        <div class="card-tag ct-pink">Mission &amp; Vision</div>
+        <h3>Why We Exist</h3>
+        <p>Our mission is to make cybersecurity education accessible, exciting, and impactful. Every student deserves the tools to understand digital threats and defend against them. Our vision is a thriving community of ethical hackers equipped not just with skills, but the mindset to use them responsibly — building a safer digital world together.</p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <!-- <div class="card stat-card" data-reveal data-delay="1">
+        <div class="stat-num" style="color:var(--blue)">200+</div>
+        <div class="stat-lbl">Active Members</div>
+      </div> -->
+      <!-- <div class="card stat-card" data-reveal data-delay="2">
+        <div class="stat-num" style="color:var(--purple)">4</div>
+        <div class="stat-lbl">Event Rounds</div>
+      </div> -->
+      <!-- <div class="card stat-card" data-reveal data-delay="3">
+        <div class="stat-num" style="color:var(--pink)">12+</div>
+        <div class="stat-lbl">Workshops Held</div>
+      </div> -->
+      <div class="card stat-card" data-reveal data-delay="4">
+        <div class="stat-num" style="color:var(--gold)">2026</div>
+        <div class="stat-lbl">Current Edition</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Cyber Sonic Rangers</div>
+          <div class="fb-sub">Cybersecurity &amp; Tech Club</div>
+        </div>
+       <div></div>
+        <div class="footer-status">
+          <div class="pulse-dot"></div>
+          Cyber Splash 2026 — Live
+        </div>
+      </div> -->
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 <strong>Cyber Sonic Rangers</strong>. All rights reserved.
+          &nbsp;·&nbsp; Cyber Splash is an official club event.
+        </div>
+        <div class="footer-tag">Made with ⚡ by the Rangers</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════
+     EVENTS PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-events">
+  <div class="section">
+
+    <div class="events-header">
+      <div class="eyebrow" data-reveal>Cyber Splash 2026</div>
+      <h1 class="page-title" data-reveal data-delay="1">
+        Event <span class="grad-text">Rounds</span>
+      </h1>
+      <p class="lead" data-reveal data-delay="2">
+        Four elite rounds. Each one a different dimension of cyber mastery. Every stage is designed to challenge your instincts, sharpen your skills, and separate the prepared from the elite.
+      </p>
+    </div>
+
+    <div class="rounds-grid">
+
+      <!-- ROUND 1 -->
+      <div class="card round-card round-1" data-reveal data-delay="1">
+        <div class="round-meta">
+          <div class="round-num-badge">Round 01</div>
+          <div class="round-icon-wrap">🧠</div>
+        </div>
+        <div class="round-title-main">Cyber Recon: Knowledge Strike</div>
+        <div class="round-title-sub">// Cyber Quiz — Reconnaissance Phase</div>
+        <p>
+          Every mission begins with reconnaissance. This round puts your theoretical cyber knowledge to the ultimate test — network fundamentals, cryptography, famous exploits, OS internals, and security protocols. Fast-paced, high-pressure, and unforgiving. Like a real recon operative, you have seconds to gather intelligence and act. Only the sharpest minds advance to the breach.
+        </p>
+        <br/>
+        <span class="round-code-tag">Knowledge Battle · Teams of 2</span>
+      </div>
+
+      <!-- ROUND 2 -->
+      <div class="card round-card round-2" data-reveal data-delay="2">
+        <div class="round-meta">
+          <div class="round-num-badge">Round 02</div>
+          <div class="round-icon-wrap">🔐</div>
+        </div>
+        <div class="round-title-main">Password Breach: Crack the Vault</div>
+        <div class="round-title-sub">// Password Detection &amp; Solving</div>
+        <p>
+          The vault is locked. Your job is to break in. Competitors will face a series of encrypted passwords, hashed credentials, and obfuscated ciphers — each one guarding a flag. Using tools, wordlists, and raw cryptographic intuition, you must crack every layer before time expires. This is where pattern recognition meets technical precision. One wrong move costs everything.
+        </p>
+        <br/>
+        <span class="round-code-tag">Cryptanalysis · Individual</span>
+      </div>
+
+      <!-- ROUND 3 -->
+      <div class="card round-card round-3" data-reveal data-delay="3">
+        <div class="round-meta">
+          <div class="round-num-badge">Round 03</div>
+          <div class="round-icon-wrap">🕵️</div>
+        </div>
+        <div class="round-title-main">Operation Dhurandhar: Codebreaker Protocol</div>
+        <div class="round-title-sub">// Intelligence Decryption — Elite Cipher Ops</div>
+        <p>
+          Named after the legendary master of strategy, Operation Dhurandhar is an elite intelligence decryption challenge. Operatives receive intercepted transmissions, encoded messages, and fragmented data streams. Using steganography analysis, cipher breaking, and forensic extraction, they must reconstruct the hidden intelligence. Only agents with sharp minds and sharper instincts will crack the protocol and proceed.
+        </p>
+        <br/>
+        <span class="round-code-tag">Intel Ops · Individual</span>
+      </div>
+
+      <!-- ROUND 4 -->
+      <div class="card round-card round-4" data-reveal data-delay="4">
+        <div class="round-meta">
+          <div class="round-num-badge">Final Round</div>
+          <div class="round-icon-wrap">💻</div>
+        </div>
+        <div class="round-title-main">HackQuest: The Final Breach</div>
+        <div class="round-title-sub">// CTF Challenge — Total System Domination</div>
+        <p>
+          This is the endgame. The surviving elite face a full-spectrum Capture The Flag scenario — a live, multi-layered system with deliberately planted vulnerabilities across web, binary, network, and forensics domains. No hand-holding, no hints. Every flag captured is a battle won in a cyber war that has no mercy. The last team standing with the most flags claimed becomes the undisputed Cyber Splash Champion 2026.
+        </p>
+        <br/>
+        <span class="round-code-tag">CTF · Championship · Teams</span>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Cyber Sonic Rangers</div>
+          <div class="fb-sub">Cybersecurity &amp; Tech Club</div>
+        </div>
+        <nav class="footer-nav">
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="about">About</a>
+          <a href="#" data-page="events">Events</a>
+          <a href="#" data-page="contact">Contact</a>
+        </nav>
+        <div class="footer-status">
+          <div class="pulse-dot"></div>
+          Cyber Splash 2026 — Live
+        </div>
+      </div> -->
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 <strong>Cyber Sonic Rangers</strong>. All rights reserved.
+          &nbsp;·&nbsp; Cyber Splash is an official club event.
+        </div>
+        <div class="footer-tag">Made with ⚡ by the Rangers</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="section">
+
+    <div class="contact-header">
+      <div class="eyebrow" data-reveal>Get In Touch</div>
+      <h1 class="page-title" data-reveal data-delay="1">
+        Contact <span class="grad-text">Us</span>
+      </h1>
+      <p class="lead" data-reveal data-delay="2">
+        Questions about Cyber Splash? Reach out directly to our organizers or drop a message below — we reply within 24 hours.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info column -->
+      <div data-reveal data-delay="1">
+
+        <!-- Person 1 -->
+        <div class="person-block">
+          <div class="person-name">SURYA C — President</div>
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div class="ci-body">
+              <label>Email</label>
+              <a href="mailto:suryachandran93@outlook.com">suryachandran93@outlook.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📱</div>
+            <div class="ci-body">
+              <label>Phone</label>
+              <span>+91 93457 85397</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr-divider"></div>
+
+        <!-- Person 2 -->
+        <div class="person-block">
+          <div class="person-name">SHAKTHI DARSHAN — Vice President</div>
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div class="ci-body">
+              <label>Email</label>
+              <a href="mailto:sakthi2006darshan@gmail.com">sakthi2006darshan@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📱</div>
+            <div class="ci-body">
+              <label>Phone</label>
+              <span>+91 79045 60269</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr-divider"></div>
+
+        <!-- General -->
+        <div class="contact-item" style="margin-bottom:0">
+          <div class="ci-icon">🛡️</div>
+          <div class="ci-body">
+            <label>General Enquiries</label>
+            <a href="mailto:cybersonicrangers@gmail.com">csr.9325@gmail.com</a>
+          </div>
+        </div>
+        <div class="hr-divider"></div>
+
+<!-- Social Links -->
+<div class="social-contact">
+  <div class="person-name">Connect With Us</div>
+
+  <div class="social-buttons">
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/csr93" target="_blank" class="social-btn linkedin">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5zM.24 8.75h4.5V24h-4.5V8.75zM8.64 8.75h4.32v2.08h.06c.6-1.14 2.04-2.34 4.2-2.34 4.5 0 5.34 2.96 5.34 6.82V24h-4.5v-7.75c0-1.84-.03-4.2-2.55-4.2-2.55 0-2.94 2-2.94 4.06V24h-4.5V8.75z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/cybersonicrangers?igsh=MWRzMHBqZnAybHJ1Zw==" target="_blank" class="social-btn instagram">
+      <svg viewBox="0 0 24 24">
+        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm6-1.25a1.25 1.25 0 1 1-1.25-1.25A1.25 1.25 0 0 1 18 6.25z"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919345785397" target="_blank" class="social-btn whatsapp">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 0 0-8.94 14.56L2 22l5.58-1.05A10 10 0 1 0 12 2zm5.07 14.14c-.21.58-1.21 1.11-1.67 1.17-.43.06-.97.08-1.57-.11-.36-.12-.82-.27-1.41-.53-2.48-1.07-4.1-3.7-4.22-3.87-.11-.17-1-1.33-1-2.53s.63-1.79.85-2.04c.22-.25.48-.31.64-.31.16 0 .32 0 .46.01.15.01.34-.06.53.4.21.51.72 1.77.78 1.9.06.13.1.28.02.45-.08.17-.12.28-.24.43-.12.14-.25.32-.36.43-.12.12-.24.25-.1.49.14.24.63 1.04 1.35 1.68.93.83 1.71 1.09 1.95 1.21.24.12.38.1.52-.06.14-.17.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.38.65 1.62.77.24.12.4.18.46.28.06.1.06.58-.15 1.16z"/>
+      </svg>
+    </a>
+
+  </div>
+</div>
+
+
+      </div>
+
+      <!-- Form column -->
+      <div class="card form-card" data-reveal data-delay="2">
+        <h3>Send a Message</h3>
+        <div class="form-subtext">
+          This sends your message directly to our team via your email client. No backend needed — just hit Send.
+        </div>
+
+        <form id="contact-form" autocomplete="off">
+          <div class="field">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required/>
+          </div>
+          <div class="field">
+            <label>Your Email</label>
+            <input type="email" name="replyto" placeholder="you@example.com" required/>
+          </div>
+          <div class="field">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="e.g. Registration query" required/>
+          </div>
+          <div class="field">
+            <label>Message</label>
+            <textarea name="message" placeholder="Write your message here…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" style="width:100%;justify-content:center;">
+            <span>Send Message ↗</span>
+          </button>
+          <div id="form-msg"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fb-name">Cyber Sonic Rangers</div>
+          <div class="fb-sub">Cybersecurity &amp; Tech Club</div>
+        </div>
+       
+        <div class="footer-status">
+          <div class="pulse-dot"></div>
+          Cyber Splash 2026 — Live
+        </div>
+      </div> -->
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 <strong>Cyber Sonic Rangers</strong>. All rights reserved.
+          &nbsp;·&nbsp; Cyber Splash is an official club event.
+        </div>
+        <div class="footer-tag">Made with ⚡ by the Rangers</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
